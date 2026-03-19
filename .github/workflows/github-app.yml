@@ -24,7 +24,7 @@ jobs:
         with:
           repository: ravikumara004/private-test
           token: ${{ steps.generate_token.outputs.token }}
-          path: private-test
+          path: private-test--tt
         
       - name: Clone another repo
         run: |
