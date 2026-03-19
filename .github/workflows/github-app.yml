@@ -19,7 +19,13 @@ jobs:
           private-key: ${{ secrets.PRIVATE_KEY }}
           owner: ravikumara004
           repositories: private-test
-          
+      - name: Checkout private repo
+        uses: actions/checkout@v4
+        with:
+          repository: ravikumara004/private-test
+          token: ${{ steps.generate_token.outputs.token }}
+          path: private-test
+        
       - name: Clone another repo
         run: |
           ls -al
