@@ -24,7 +24,7 @@ jobs:
         run: |
           ls -al
           echo "${{ steps.generate_token.outputs.token }}"
-          git clone https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/ravikumara004/java-web-app-docker.git
+          git clone https://x-access-token:${{ steps.generate_token.outputs.token }}@github.com/ravikumara004/private-test.git
           ls -al
       # - name: Generate GitHub App Token
       #   id: app-token
